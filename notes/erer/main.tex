@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{erer}
+\author{Carl-Emil Rohde}
+\date{April 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+For at løse denne opgave og identificere den korrekte rekursionsligning for algoritmen $A$, lad os bryde beskrivelsen og valgmulighederne ned i deres komponenter:
+
+For $n=1$, beregnes resultatet i konstant tid. Dette betyder, at basisfaldet for rekursionen ikke bidrager signifikant til den samlede køretidskompleksitet, ud over en $O(1)$-term, som ofte er undladt i den overordnede rekursionsligning.
+For $n>1$, er der et initialt arbejde, der tager $O(n \lg n)$ tid. Dette inkluderer beregningen af de fire inputs $X_1, X_2, X_3, X_4$, hver af størrelse $\lfloor n / 2\rfloor$. Det betyder, at for hvert rekursivt kald, opdeles problemet i 4 mindre underproblemer, hver halv størrelse af det oprindelige problem.
+Derefter udføres fire rekursive kald på disse inputs, hvilket indikerer en multiplikativ faktor på 4 i rekursionsligningen (hver for $A(X_1), A(X_2), A(X_3), A(X_4)$).
+Til sidst, efter de rekursive kald, kombineres de fire svar til det endelige output $A(X)$ i tid $O\left(n^2\right)$. Dette indikerer, at der er en kombinationstrin, som tager $O\left(n^2\right)$ tid.
+Med disse punkter i tankerne, kan vi udelukke valgmulighed 2 og 4, da de antyder, at problemet opdeles i fire underproblemer af størrelsen $\lfloor n / 4\rfloor$, hvilket ikke stemmer overens med problemets beskrivelse.
+
+Mellem valgmulighed 1 og 3 er den primære forskel, om den tidskompleksitet, der er forbundet med kombinationstrinnet, er $O(n \lg n)$ eller $O\left(n^2\right)$. Ifølge problemets beskrivelse tager kombinationstrinnet $O\left(n^2\right)$ tid, hvilket gør valgmulighed 1 inkorrekt.
+
+Derfor er den korrekte rekursionsligning for køretiden $T(n)$ af algoritmen $A$:
+
+3. $T(n)=4 T(\lfloor n / 2\rfloor)+O\left(n^2\right)$.
+
+Dette udtrykker, at for hver opdeling af problemet, udføres fire rekursive kald på underproblemer af halv størrelse, og efterfølgende tager det en tid på $O\left(n^2\right)$ at kombinere disse underproblemer til en slutløsning.
+\end{document}
