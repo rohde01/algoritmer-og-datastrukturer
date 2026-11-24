@@ -1,7 +1,7 @@
 # Algoritmer og datastrukturer
 
 Københavns Universitet · BSc i datalogi-økonomi · Forår 2024, blok 3 · 7,5 ECTS  
-Kursuskode NDAA04010U · [Kursusbeskrivelse](https://kurser.ku.dk/course/ndaa04010u)
+Kursuskode NDAA04011U · [Kursusbeskrivelse](https://kurser.ku.dk/course/ndaa04011u)
 
 Design og analyse af algoritmer og datastrukturer med rekursionsligninger, del og hersk, amortiseret analyse, søgetræer, hobe og grådige algoritmer.
 
